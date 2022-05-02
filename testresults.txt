@@ -1,0 +1,14 @@
+Selected Leg : 2
+Running Strategy : F2FB1 ->  : KOTAKBANK ->  : 29 Apr 2021 ->  : 25 Mar 2021 ->  : fg
+Error in add strategy.
+Selected Leg : 1
+Running Strategy : OPTB ->  : AMARAJABAT ->  : CE ->  : 27 May 2021 ->  : 720 ->  : CP1
+New strategy added successfully
+Selected Leg : 2
+Running Strategy : STG ->  : ML ->  : NIFTY ->  : 06 May 2021 ->  : 14950 ->  : 14400 ->  : CP1
+New strategy added successfully
+Selected Leg : 1
+Running Strategy : OPTB ->  : UBL ->  : PE ->  : 29 Apr 2021 ->  : 1600 ->  : fg
+Error in add strategy.
+Selected Leg : 2
+Running Strategy : ORS ->  : ML ->  : BAJAJ-AUTO ->  : CE ->  : 27 May 2021
