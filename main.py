@@ -36,6 +36,7 @@ def login(i, driver):
         password.send_keys(str(i))
         print("Logged in successfully at tab ", i)
         loginbutton.click()
+        # driver.execute_script("document.body.style.zoom='90%'")
 
 def check_data(i, driver):
     # loading_tagding_tag = driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[1]/div[1]/span[2]')
@@ -67,7 +68,7 @@ def select_leg(i, driver):
     # print(legoptions)
     # selected_leg = random.randint(0, len(legoptions)-1)
     selected_leg = random.randint(0, 1)
-    # selected_leg = 0
+    # selected_leg = 1
     # print(selected_leg)
     time.sleep(0.4)
     # print("leg", selected_leg)
@@ -102,6 +103,7 @@ def select_strategy(i,driver,leg):
     # print(stratoptions)
     # print(legoptions)
     selected_strat = random.randint(0, len(stratoptions)-1)
+    # selected_strat = 3
     opn = selected_strat+1
     selected_strat_name = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div/div/div/div/div/div/div/button["+str(opn)+"]/span/span"))).get_attribute('innerHTML')
@@ -116,13 +118,13 @@ def select_strategy(i,driver,leg):
         select_strategy(i, driver, leg)
         return
     # print(selected_leg)
-    css241_selections(i, driver,leg, selected_strat)
+    css241_selections(i, driver,leg, selected_strat, selected_strat_name)
 
 def randomise_dropdown(driver, name):
     try:
         symbol1 = WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, name))).click()
-        # time.sleep(0.5)
+        time.sleep(0.2)
         strategylist = WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div/div/div/div/div/div/div')))
         # print(strategylist)
@@ -136,6 +138,8 @@ def randomise_dropdown(driver, name):
         return
     # print(len(stratoptions))
     selected_strat = random.randint(0, len(stratoptions)-1)
+    # if selected_strat - 4 >= 0:
+    #     selected_strat = selected_strat - 4
     time.sleep(0.2)
     opn = selected_strat+1
     selected_opt_name = WebDriverWait(driver, 5).until(
@@ -144,7 +148,12 @@ def randomise_dropdown(driver, name):
     # time.sleep(0.2)
     try:
         actions = ActionChains(driver)
-        actions.move_to_element(stratoptions[selected_strat]).perform()
+        if selected_strat + 4 < len(stratoptions):
+            actions.move_to_element(stratoptions[selected_strat+4]).perform()
+            time.sleep(0.1)
+        else:
+            actions.move_to_element(stratoptions[selected_strat]).perform()
+            time.sleep(0.1)
         stratoptions[selected_strat].click()
     except:
         # time.sleep(0.4)
@@ -157,9 +166,12 @@ def randomise_dropdown(driver, name):
     file1.write(s)
     # print(selected_leg)
 
-def css241_selections(i, driver,leg, strat):
+def css241_selections(i, driver,leg, strat, strat_name):
     if leg == 0:
         # randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/span[1]'
+        op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/span[1]')
+        if op == "NOOP":
+            return
         op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/span[1]')
         if op == "NOOP":
             return
@@ -176,7 +188,7 @@ def css241_selections(i, driver,leg, strat):
         if op == "NOOP":
             return
     elif leg == 1:
-        if strat < 1:
+        if strat_name == "EQ2FB":
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/span[1]')
             if op == "NOOP":
                 return
@@ -186,7 +198,7 @@ def css241_selections(i, driver,leg, strat):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div/div/span[1]')
             if op == "NOOP":
                 return
-        elif strat < 2:
+        elif strat_name == "F2EQB":
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/div/span[1]')
             if op == "NOOP":
                 return
@@ -196,7 +208,7 @@ def css241_selections(i, driver,leg, strat):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div/div/span[2]')
             if op == "NOOP":
                 return
-        elif strat < 5:
+        elif strat_name == "F2FB1" or strat_name == "F2FI" or strat_name == "F2FSP":
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[1]/div/span[1]')
             if op == "NOOP":
                 return
@@ -209,7 +221,7 @@ def css241_selections(i, driver,leg, strat):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div/div/span[2]')
             if op == "NOOP":
                 return
-        elif strat < 7:
+        elif strat_name == "STD" or strat_name == "STG":
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[2]/div/div/span[1]')
             if op == "NOOP":
                 return
@@ -222,14 +234,14 @@ def css241_selections(i, driver,leg, strat):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[3]/div/span[1]')
             if op == "NOOP":
                 return
-            if strat == 6:
+            if strat_name == "STG":
                 op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[2]/div[3]/div/span[1]')
                 if op == "NOOP":
                     return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[4]/div[1]/div/div/span[1]')
             if op == "NOOP":
                 return
-        elif strat < 8:
+        elif strat_name == "ORS":
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[2]/div/div/span[1]')
             if op == "NOOP":
                 return
@@ -255,7 +267,7 @@ def css241_selections(i, driver,leg, strat):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[4]/div[1]/div/div/span[2]')
             if op == "NOOP":
                 return
-        else:
+        elif strat_name == "ODS":
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div/span[1]')
             if op == "NOOP":
                 return
@@ -296,19 +308,23 @@ def css241_selections(i, driver,leg, strat):
 
 def openchrome_and_openchat(input):
         #global input_box
-        times = 10
+        times = 1
         driver = webdriver.Chrome()
         for i in range(1):
             driver.execute_script("window.open('about:blank','tab"+str(i)+"');")
             driver.switch_to.window("tab"+str(i)+"")
-            driver.get("http://192.168.118.16:8089")
+            driver.get("http://192.168.118.16:8088")
+            # driver.execute_script("document.body.style.zoom='90%'")
+            # driver.switch_to.window("tab" + str(i) + "")
+            # time.sleep(1)
             login(i, driver)
             print("Opened Testing Environment ")
 
         # for i in range(times):
         #     check_data(i, driver)
         for i in range(times):
-            select_leg(i, driver)
+            # select_leg(i, driver)
+            automate_trades(i, driver)
         file1.close()
         # driver.quit()
         # sys.exit()
