@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 import random
+from trades import *
 from multiprocessing import Pool
 from selenium.webdriver.common.keys import Keys as KEYS
 import sys
@@ -387,3 +388,4 @@ openchrome_and_openchat(range(5))
 #Expiry change with persistent change
 #Strike 1 Strike 2, irrelevent options
 #zoomout for options
+#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
