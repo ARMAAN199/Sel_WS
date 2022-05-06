@@ -27,13 +27,17 @@ def automate_trades(i, driver):
     tradegroup_count = find_tradegroup_count(i, driver)
     print("TradeGroups Found : ", tradegroup_count)
     # Choosing a TradeGroup
-    group_name, chosen = choose_and_name(i, driver, 1, tradegroup_count, tradegroupPath)
+    group_name, chosenGroup = choose_and_name(i, driver, 1, tradegroup_count, tradegroupPath)
     print(group_name)
     # Choosing Trade in TradeGroup
-    trade_count = find_trade_count(i, driver, chosen)
+    trade_count = find_trade_count(i, driver, chosenGroup)
     print("Trades Found : ", trade_count)
-    tradeNamePath[0] = tradeNamePath[0] + str(chosen) + tradeNamePath[2]
-    trade_name , chosen = choose_and_name(i, driver, 1, trade_count, tradeNamePath, 0)
+    tradeNamePath[0] = tradeNamePath[0] + str(chosenGroup) + tradeNamePath[2]
+    trade_name , chosenTrade = choose_and_name(i, driver, 1, trade_count, tradeNamePath, 0)
+    print(trade_name)
+    #openBuyOrderWindow
+    buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
+    trade_name , chosenTrade = choose_and_name(i, driver, 1, 2, buyOrderWindowPath)
     print(trade_name)
 
 
@@ -87,6 +91,19 @@ def opened_trade_name(i,driver, chosen):
 
 
 '''
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/i
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/div/i
+
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div/i
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div/i
+
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[3]/div[3]/div[1]/div/i
+
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]/div[1]/div[2]/div[1]/div/i
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]/div[1]/div[3]/div[1]/div/i
+
+
+
 /html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[]/div[1]/span"
 
 /html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/span
@@ -98,4 +115,5 @@ def opened_trade_name(i,driver, chosen):
 /html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]/div[2]
 
 /html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]
+
 '''
