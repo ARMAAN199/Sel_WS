@@ -13,7 +13,6 @@ from selenium.webdriver.common.keys import Keys as KEYS
 import sys
 
 import os
-
 def automate_trades(i, driver):
     try:
         element =  WebDriverWait(driver, 40).until(
@@ -35,23 +34,29 @@ def automate_trades(i, driver):
     tradeNamePath[0] = tradeNamePath[0] + str(chosenGroup) + tradeNamePath[2]
     trade_name , chosenTrade = choose_and_name(i, driver, 1, trade_count, tradeNamePath, 0)
     print(trade_name)
-    #openBuyOrderWindow
     buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
-    trade_name , chosenTrade = choose_and_name(i, driver, 1, 2, buyOrderWindowPath)
-    print(trade_name)
+    choose_and_name(i, driver, 2, 1, buyOrderWindowPath)
+    intradewindow(i, driver)
 
 
 def choose_and_name(i, driver, min , max, path, click = 1):
-    chosen = random.randint(min, max)
+    if min > max:
+        chosen = ""
+    else:
+        chosen = random.randint(min, max)
     time.sleep(0.4)
     # print(path[0] + str(chosen) + path[1])
     try:
+        actions = ActionChains(driver)
         ele = WebDriverWait(driver, 5).until(
                 ARMAAN.presence_of_element_located((By.XPATH, path[0] + str(chosen) + path[1])))
+        actions.move_to_element(ele).perform()
         name = ele.get_attribute("innerHTML")
         if click == 1:
             ele.click()
-        return [name, chosen]
+            return [name, chosen]
+        else:
+            return ["nil", chosen]
     except:
         print("error")
         return
@@ -74,6 +79,17 @@ def find_trade_count(i, driver, chosen):
         return len(trades)
     except:
         print("No Trades Found")
+
+
+def intradewindow(i, driver):
+    try:
+        ele = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, orderwindow_title[0])))
+        window_title = ele.get_attribute("innerHTML")
+        print("Opened Window : ", window_title)
+    except:
+        print("unable to open trade window, trying again..")
+        intradewindow(i, driver)
+        return
 
 
 def opened_trade_name(i,driver, chosen):
