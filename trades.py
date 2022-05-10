@@ -3,6 +3,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as ARMAAN
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
@@ -38,7 +39,8 @@ def automate_trades(i, driver):
     print(trade_name)
     buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
     choose_and_name(i, driver, 2, 1, buyOrderWindowPath)
-    readTradeWindow(i, driver)
+    delta_val = readTradeWindow(i, driver)
+    randomize_inputs(i, driver, delta_val)
 
 
 def choose_and_name(i, driver, min , max, path, click = 1):
@@ -93,6 +95,7 @@ def readTradeWindow(i, driver):
         return
     dp = read_delta(i, driver)
     print("delta : ", dp)
+    return dp
     # except:
     #     print("unable to read delta, cancelling thread")
 
@@ -100,6 +103,30 @@ def read_delta(i, driver):
     ele = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, delta[0])))
     delta_price = ele.get_attribute("innerHTML")
     return delta_price
+
+
+def randomize_inputs(i, driver, delta_val):
+    badla_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[0])))
+    lots_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[1])))
+    lots_pc_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[2])))
+    order_button =
+    badla_input.send_keys(Keys.CONTROL, "a")
+    variability = random.uniform(-10, 20)
+    delta_val = float(delta_val)
+    badla_val = delta_val + ((delta_val * variability)/100)
+    print("Taking Badla with a variability of plus-minus 20% of delta, calculated badla val : ", badla_val)
+    badla_input.send_keys(badla_val)
+    lots_input.send_keys(Keys.CONTROL, "a")
+    lots_val = random.randint(-1000, 3000)
+    print("lots val : ", lots_val)
+    lots_input.send_keys(lots_val)
+    lots_pc_input.send_keys(Keys.CONTROL, "a")
+    lots_pc_val = random.randint(-1000, 3000)
+    print("lots pc val : ", lots_pc_val)
+    lots_pc_input.send_keys(lots_pc_val)
+    time.sleep(10)
+
+
 
 def opened_trade_name(i,driver, chosen):
     tradename = WebDriverWait(driver, 5).until(
