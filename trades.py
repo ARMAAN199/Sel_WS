@@ -24,6 +24,8 @@ def automate_trades(i, driver):
         return
 
     tradegroup_count = find_tradegroup_count(i, driver)
+    if tradegroup_count == 0:
+        return
     print("TradeGroups Found : ", tradegroup_count)
     # Choosing a TradeGroup
     group_name, chosenGroup = choose_and_name(i, driver, 1, tradegroup_count, tradegroupPath)
@@ -36,7 +38,7 @@ def automate_trades(i, driver):
     print(trade_name)
     buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
     choose_and_name(i, driver, 2, 1, buyOrderWindowPath)
-    intradewindow(i, driver)
+    readTradeWindow(i, driver)
 
 
 def choose_and_name(i, driver, min , max, path, click = 1):
@@ -81,20 +83,27 @@ def find_trade_count(i, driver, chosen):
         print("No Trades Found")
 
 
-def intradewindow(i, driver):
+def readTradeWindow(i, driver):
     try:
         ele = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, orderwindow_title[0])))
         window_title = ele.get_attribute("innerHTML")
         print("Opened Window : ", window_title)
     except:
-        print("unable to open trade window, trying again..")
-        intradewindow(i, driver)
+        print("unable to open trade window")
         return
+    dp = read_delta(i, driver)
+    print("delta : ", dp)
+    # except:
+    #     print("unable to read delta, cancelling thread")
 
+def read_delta(i, driver):
+    ele = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, delta[0])))
+    delta_price = ele.get_attribute("innerHTML")
+    return delta_price
 
 def opened_trade_name(i,driver, chosen):
     tradename = WebDriverWait(driver, 5).until(
-        EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div["+str(chosen)+"]/div[1]/div[2]/span"))).get_attribute("innerHTML")
+        ARMAAN.presence_of_element_located((By.XPATH, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div["+str(chosen)+"]/div[1]/div[2]/span"))).get_attribute("innerHTML")
     return tradename
 
 
@@ -131,5 +140,11 @@ def opened_trade_name(i,driver, chosen):
 /html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]/div[2]
 
 /html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]
+
+/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div/div/input
+/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div[1]/div[1]/div/div/input
+
+/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div[1]/div[2]/div/div/input
+/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/input
 
 '''
