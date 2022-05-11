@@ -1,0 +1,2 @@
+Selected Leg : 1
+Running Strategy : OPTB ->  : OPTB
