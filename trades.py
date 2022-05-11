@@ -109,7 +109,7 @@ def randomize_inputs(i, driver, delta_val):
     badla_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[0])))
     lots_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[1])))
     lots_pc_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[2])))
-    order_button =
+    order_button = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[6])))
     badla_input.send_keys(Keys.CONTROL, "a")
     variability = random.uniform(-10, 20)
     delta_val = float(delta_val)
@@ -124,6 +124,11 @@ def randomize_inputs(i, driver, delta_val):
     lots_pc_val = random.randint(-1000, 3000)
     print("lots pc val : ", lots_pc_val)
     lots_pc_input.send_keys(lots_pc_val)
+    time.sleep(1)
+    order_button.click()
+    msgc = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, msgcomp[0])))
+    msg = msgc.get_attribute("innerHTML")
+    print(msg)
     time.sleep(10)
 
 
