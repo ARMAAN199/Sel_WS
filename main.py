@@ -68,7 +68,7 @@ def select_leg(i, driver):
         return
     # print(legoptions)
     # selected_leg = random.randint(0, len(legoptions)-1)
-    selected_leg = random.randint(0, 1)
+    selected_leg = random.randint(0, 0)
     # selected_leg = 1
     # print(selected_leg)
     time.sleep(0.4)
@@ -173,7 +173,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
         op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/span[1]')
         if op == "NOOP":
             return
-        op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/span[1]')
+        op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div[1]')
         if op == "NOOP":
             return
         op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[2]/div/span[1]')
@@ -190,7 +190,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             return
     elif leg == 1:
         if strat_name == "EQ2FB":
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/span[1]')
+            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div[2]/div/span[1]')
@@ -200,7 +200,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             if op == "NOOP":
                 return
         elif strat_name == "F2EQB":
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/div/span[1]')
+            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/span[1]')
@@ -324,7 +324,7 @@ def openchrome_and_openchat(input):
         # for i in range(times):
         #     check_data(i, driver)
         for i in range(times):
-            # select_leg(i, driver)
+            select_leg(i, driver)
             automate_trades(i, driver)
         file1.close()
         # driver.quit()
