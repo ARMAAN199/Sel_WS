@@ -1,0 +1,2 @@
+freq_sym = ["BANKNIFTY", "NIFTY", "acc", "reliance", "aartiind", "adanient", "adaniports", "apollotyre", "axisbank", "dabur", "icicibank",
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "s", "r", "t"]
