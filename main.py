@@ -7,6 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 import random
 from trades import *
+from main_config import *
 from multiprocessing import Pool
 from selenium.webdriver.common.keys import Keys as KEYS
 import sys
@@ -68,7 +69,7 @@ def select_leg(i, driver):
         return
     # print(legoptions)
     # selected_leg = random.randint(0, len(legoptions)-1)
-    selected_leg = random.randint(0, 0)
+    selected_leg = random.randint(1, 1)
     # selected_leg = 1
     # print(selected_leg)
     time.sleep(0.4)
@@ -165,17 +166,28 @@ def randomise_dropdown(driver, name):
     print(" ->  : ", selected_opt_name)
     s = " ->  : " + str(selected_opt_name)
     file1.write(s)
-    # print(selected_leg)
+
+
+def randomise_new_dropdown(driver, path):
+    sym = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, path)))
+    sym.click()
+    chosen_sym = random.choice(freq_sym)
+
+    sym.send_keys(chosen_sym)
+    sym.send_keys(KEYS.ENTER)
+    return chosen_sym
 
 def css241_selections(i, driver,leg, strat, strat_name):
     if leg == 0:
         # randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/span[1]'
-        op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/span[1]')
+        op = randomise_new_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div[1]/div[2]/input')
         if op == "NOOP":
             return
-        op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div[1]')
-        if op == "NOOP":
-            return
+        # '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[2]/div/span[2]'
+        # op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div[1]')
+        # if op == "NOOP":
+        #     return
         op = randomise_dropdown(driver, '/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div/div[2]/div/span[1]')
         if op == "NOOP":
             return
@@ -190,7 +202,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             return
     elif leg == 1:
         if strat_name == "EQ2FB":
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div[2]/div/span[1]')
@@ -200,7 +212,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             if op == "NOOP":
                 return
         elif strat_name == "F2EQB":
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/span[1]')
@@ -210,7 +222,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             if op == "NOOP":
                 return
         elif strat_name == "F2FB1" or strat_name == "F2FI" or strat_name == "F2FSP":
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[1]/div/span[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[1]/div/div/div[1]/div[2]/input')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/span[1]')
@@ -226,7 +238,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[2]/div/div/span[1]')
             if op == "NOOP":
                 return
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[1]/div/span[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[1]/div/div/div[1]/div[2]/input')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[2]/div/span[1]')
@@ -246,7 +258,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[2]/div/div/span[1]')
             if op == "NOOP":
                 return
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[1]/div/span[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[1]/div/div/div[1]/div[2]/input')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[3]/div[1]/div[2]/div/span[1]')
@@ -272,7 +284,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div/div/span[1]')
             if op == "NOOP":
                 return
-            op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[1]/div/span[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[1]/div/div/div[1]/div[2]/input')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/span[1]')
@@ -309,7 +321,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
 
 def openchrome_and_openchat(input):
         #global input_box
-        times = 1
+        times = 5
         driver = webdriver.Chrome()
         for i in range(1):
             driver.execute_script("window.open('about:blank','tab"+str(i)+"');")
@@ -325,7 +337,7 @@ def openchrome_and_openchat(input):
         #     check_data(i, driver)
         for i in range(times):
             select_leg(i, driver)
-            automate_trades(i, driver)
+        automate_trades(i, driver)
         file1.close()
         # driver.quit()
         # sys.exit()
