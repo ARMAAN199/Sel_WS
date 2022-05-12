@@ -1,0 +1,79 @@
+Logged in successfully at tab  0
+Opened Testing Environment
+Going to Strategies Page
+TradeGroups Found :  11
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[7]/div[1]/span
+CP2_STD_BANKNIFTY
+Trades Found :  1
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[7]/div[2]/div[1]/div[1]/div[2]/span
+nil
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[7]/div[2]/div[1]/div[2]/div[1]/div/i
+Opened Window :  Buy Order Window - STD_BANKNIFTY_210318
+delta :  -3036.95
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -3098.7848013313246
+lots val :  -587
+lots pc val :  1166
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -3153.386964767333
+lots val :  -853
+lots pc val :  -362
+
+       Qty should be greater than zero.
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -3302.991661211621
+lots val :  -477
+lots pc val :  324
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -3071.5864415522124
+lots val :  -87
+lots pc val :  708
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -2871.2278264850684
+lots val :  233
+lots pc val :  -795
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -2798.3987621189217
+lots val :  341
+lots pc val :  -803
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -3334.0539896601535
+lots val :  2185
+lots pc val :  -953
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -2936.5655664652113
+lots val :  2752
+lots pc val :  2442
