@@ -202,7 +202,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             return
     elif leg == 1:
         if strat_name == "EQ2FB":
-            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/div/div/div[1]/div[2]/input')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[2]/div[2]/div/span[1]')
@@ -212,7 +212,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
             if op == "NOOP":
                 return
         elif strat_name == "F2EQB":
-            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div/div/div/div[1]/div[1]')
+            op = randomise_new_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[1]/div/div/div[1]/div[2]/input')
             if op == "NOOP":
                 return
             op = randomise_dropdown(driver,'/html/body/div[1]/div[1]/div[2]/div[2]/div/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/span[1]')
@@ -321,12 +321,12 @@ def css241_selections(i, driver,leg, strat, strat_name):
 
 def openchrome_and_openchat(input):
         #global input_box
-        times = 5
+        times = 10
         driver = webdriver.Chrome()
         for i in range(1):
             driver.execute_script("window.open('about:blank','tab"+str(i)+"');")
             driver.switch_to.window("tab"+str(i)+"")
-            driver.get("http://192.168.118.16:8080")
+            driver.get("http://192.168.118.16:8089")
             # driver.execute_script("document.body.style.zoom='90%'")
             # driver.switch_to.window("tab" + str(i) + "")
             # time.sleep(1)
@@ -335,9 +335,10 @@ def openchrome_and_openchat(input):
 
         # for i in range(times):
         #     check_data(i, driver)
-        for i in range(times):
-            select_leg(i, driver)
-        automate_trades(i, driver)
+        # for i in range(times):
+        #     select_leg(i, driver)
+
+        automate_trades(i, driver, times)
         file1.close()
         # driver.quit()
         # sys.exit()
