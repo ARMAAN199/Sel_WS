@@ -1,0 +1,263 @@
+Going to Strategies Page
+TradeGroups Found :  11
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[1]/span
+CP2_OPTB_AARTIIND
+Trades Found :  1
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]/div[1]/div[1]/div[2]/span
+nil
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[4]/div[2]/div[1]/div[2]/div[1]/div/i
+Opened Window :  Buy Order Window - OPTB_AARTIIND_210527
+delta :  0
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  1053
+lots pc val :  2992
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  1362
+lots pc val :  -140
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  2866
+lots pc val :  -200
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.051169585123611
+lots val :  1204
+lots pc val :  2066
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  2083
+lots pc val :  904
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.035550417367498
+lots val :  -92
+lots pc val :  859
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  132
+lots pc val :  -230
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.486180919428831
+lots val :  -651
+lots pc val :  -156
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  1436
+lots pc val :  2859
+
+       Qty should be greater than zero.
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  4.535824751676406
+lots val :  -657
+lots pc val :  -859
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  2739
+lots pc val :  -480
+
+       Qty should be greater than zero.
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.392855137613759
+lots val :  2637
+lots pc val :  -780
+
+       Qty should be greater than zero.
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  -537
+lots pc val :  1959
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.433653034675419
+lots val :  2060
+lots pc val :  1981
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  537
+lots pc val :  1195
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.526600584633394
+lots val :  1080
+lots pc val :  -406
+
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  1859
+lots pc val :  -297
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5.785424870172446
+lots val :  2636
+lots pc val :  -635
+
+      Qty per cycle should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -1.3213587934053512
+lots val :  -816
+lots pc val :  888
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -1.5136678897441818
+lots val :  2428
+lots pc val :  -229
+
+       Qty should be greater than zero.
+
+
+----------------------------------------------------------------------------------------------
+
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -1.2072713985087882
+lots val :  1255
+lots pc val :  113
+Orb1 request sent successfully for strategy EQ2FB ASHOKLEY F with parameters- Price: -1.2072713985087882, Qty: 1255
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  763
+EDIT : lots val :  2113
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -571
+EDIT : lots val :  2829
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  2479
+EDIT : lots val :  1438
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  2260
+EDIT : lots val :  1989
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1898
+EDIT : lots val :  1596
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1008
+EDIT : lots val :  2778
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1354
+EDIT : lots val :  2119
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1247
+EDIT : lots val :  2520
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -287
+EDIT : lots val :  987
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1626
+EDIT : lots val :  1954
+Orb1 request modified successfully for strategy STD BANKNIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
