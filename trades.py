@@ -30,30 +30,32 @@ def automate_trades(i, driver, times):
         return
     print("TradeGroups Found : ", tradegroup_count)
     # Choosing a TradeGroup
-    group_name, chosenGroup = choose_and_name(i, driver, 1, tradegroup_count, tradegroupPath)
-    print(group_name)
-    # Choosing Trade in TradeGroup
-    trade_count = find_trade_count(i, driver, chosenGroup)
-    print("Trades Found : ", trade_count)
-    tradeNamePath[0] = tradeNamePath[0] + str(chosenGroup) + tradeNamePath[2]
-    trade_name , chosenTrade = choose_and_name(i, driver, 1, trade_count, tradeNamePath, 0)
-    print(trade_name)
-    buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
-    choose_and_name(i, driver, 2, 1, buyOrderWindowPath)
-    delta_val = readTradeWindow(i, driver)
-    if delta_val == "unable to open trade window":
-        for i in range(times):
-            edit_order(i, driver, times, chosenGroup, chosenTrade, delta_val)
-        return
     for i in range(times):
-        msg, badla = randomize_inputs(i, driver, delta_val)
-        if "successfully for" in msg:
+        group_name, chosenGroup = choose_and_name(i, driver, 1, tradegroup_count, tradegroupPath)
+        print(group_name)
+        # Choosing Trade in TradeGroup
+        trade_count = find_trade_count(i, driver, chosenGroup)
+        print("Trades Found : ", trade_count)
+        tradeNamePath[0] = tradeNamePath[0] + str(chosenGroup) + tradeNamePath[2]
+        trade_name , chosenTrade = choose_and_name(i, driver, 1, trade_count, tradeNamePath, 0)
+        print(trade_name)
+        buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
+        choose_and_name(i, driver, 2, 1, buyOrderWindowPath)
+        delta_val = readTradeWindow(i, driver)
+        if delta_val == "unable to open trade window":
             for i in range(times):
-                edit_order(i, driver, times, chosenGroup, chosenTrade, badla)
-            break
-        if badla < 1 and i > 1 :
-            delta_val =  float(delta_val) + 5.0
-        time.sleep(13)
+                edit_order(i, driver, times, chosenGroup, chosenTrade, delta_val)
+            return
+        for i in range(times):
+            msg, badla = randomize_inputs(i, driver, delta_val)
+            if "successfully for" in msg:
+                for i in range(times):
+                    edit_order(i, driver, times, chosenGroup, chosenTrade, badla)
+                break
+            if badla < 1 and i > 1 :
+                delta_val =  float(delta_val) + 5.0
+            time.sleep(10)
+        closegroup(i, driver, chosenGroup)
 
 
 
@@ -128,17 +130,17 @@ def randomize_inputs(i, driver, delta_val):
     lots_pc_input = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[2])))
     order_button = WebDriverWait(driver, 15).until(ARMAAN.presence_of_element_located((By.XPATH, inputs[6])))
     badla_input.send_keys(Keys.CONTROL, "a")
-    variability = random.uniform(-10, 20)
+    variability = random.uniform(0, 50)
     delta_val = float(delta_val)
     badla_val = delta_val + ((delta_val * variability)/100)
     print("Taking Badla with a variability of plus-minus 20% of delta, calculated badla val : ", badla_val)
     badla_input.send_keys(badla_val)
     lots_input.send_keys(Keys.CONTROL, "a")
-    lots_val = random.randint(-500, 3000)
+    lots_val = random.randint(0, 3000)
     print("lots val : ", lots_val)
     lots_input.send_keys(lots_val)
     lots_pc_input.send_keys(Keys.CONTROL, "a")
-    lots_pc_val = random.randint(-500, 3000)
+    lots_pc_val = random.randint(0, 3000)
     print("lots pc val : ", lots_pc_val)
     lots_pc_input.send_keys(lots_pc_val)
     time.sleep(1)
@@ -161,11 +163,11 @@ def edit_order(i, driver, times, group, trade, badla):
     edit_price_field.send_keys(Keys.CONTROL, "a")
     # variability = random.uniform(-10, 20)
     # new_badla = float(badla) + ((float(badla) * variability)/100)
-    new_badla = random.randint(-2000, 3000)
+    new_badla = random.randint(0, 1000)
     print(" EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val : ", new_badla)
     edit_price_field.send_keys(new_badla)
     edit_qty_field.send_keys(Keys.CONTROL, "a")
-    lots_val = random.randint(-1000, 2000)
+    lots_val = random.randint(0, 2000)
     print("EDIT : lots val : ", lots_val)
     edit_qty_field.send_keys(lots_val)
     time.sleep(1)
@@ -178,6 +180,13 @@ def edit_order(i, driver, times, group, trade, badla):
     print(msg)
     print("\n\n----------------------------------------------------------------------------------------------\n")
     time.sleep(10)
+
+
+def closegroup(i , driver, chosen):
+    ele = WebDriverWait(driver, 20).until(
+        ARMAAN.presence_of_element_located((By.XPATH, tradegroupPath[0] + str(chosen) + tradegroupPath[1])))
+    ele.click()
+    time.sleep(1)
 
 def opened_trade_name(i,driver, chosen):
     tradename = WebDriverWait(driver, 5).until(
