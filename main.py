@@ -21,17 +21,17 @@ def login(i, driver):
         # userid = WebDriverWait(driver, 2).until(
         # EC.presence_of_element_located((By.XPATH, '// *[ @ id = "TextField9"]')))
         # userid = driver.find_element_by_xpath('// *[ @ id = "TextField9"]')
-        userid = driver.find_element(by= By.XPATH, value='// *[ @ id = "TextField9"]')
+        userid = driver.find_element(by= By.XPATH, value='/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div/input')
         # print("Found UserId Col")
         password = WebDriverWait(driver, 2).until(
-        EC.presence_of_element_located((By.XPATH, '// *[ @ id = "TextField19"]')))
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div/input')))
         # print("Found Password Col")
         loginbutton = WebDriverWait(driver, 2).until(
-        EC.presence_of_element_located((By.XPATH, '// *[ @ id = "ModalFocusTrapZone3"] / div[2] / div / div[2] / div / div / button / span')))
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/button/span')))
         # print("Found Login Button")
         userid.clear()
         userid.click()
-        userid.send_keys('AR')
+        userid.send_keys('test')
         # print("Entered a UserId")
         password.clear()
         password.click()
@@ -173,9 +173,19 @@ def randomise_new_dropdown(driver, path):
             EC.presence_of_element_located((By.XPATH, path)))
     sym.click()
     chosen_sym = random.choice(freq_sym)
-
+    time.sleep(1)
     sym.send_keys(chosen_sym)
+    time.sleep(1)
+    sym.send_keys(KEYS.ARROW_UP)
+    time.sleep(1)
     sym.send_keys(KEYS.ENTER)
+    time.sleep(1)
+    # sym = WebDriverWait(driver, 15).until(
+    #         EC.presence_of_element_located((By.XPATH, name_for_new_dropdown[0])))
+    # get_name = sym.get_attribute("innerHTML")
+    # print(" ->  : ", get_name)
+    # s = " ->  : " + str(get_name)
+    # file1.write(s)
     return chosen_sym
 
 def css241_selections(i, driver,leg, strat, strat_name):
@@ -326,7 +336,7 @@ def openchrome_and_openchat(input):
         for i in range(1):
             driver.execute_script("window.open('about:blank','tab"+str(i)+"');")
             driver.switch_to.window("tab"+str(i)+"")
-            driver.get("http://192.168.118.16:8089")
+            driver.get("http://172.168.101.33")
             # driver.execute_script("document.body.style.zoom='90%'")
             # driver.switch_to.window("tab" + str(i) + "")
             # time.sleep(1)
@@ -337,9 +347,12 @@ def openchrome_and_openchat(input):
         #     check_data(i, driver)
         # for i in range(times):
         #     select_leg(i, driver)
+        #     time.sleep(8)
 
+        # for i in range(times):
+        #     automate_trades(i, driver, times)
         automate_trades(i, driver, times)
-        file1.close()
+        # file1.close()
         # driver.quit()
         # sys.exit()
 
