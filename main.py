@@ -331,7 +331,7 @@ def css241_selections(i, driver,leg, strat, strat_name):
 
 def openchrome_and_openchat(input):
         #global input_box
-        times = 10
+        times = 2
         driver = webdriver.Chrome()
         for i in range(1):
             driver.execute_script("window.open('about:blank','tab"+str(i)+"');")
