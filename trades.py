@@ -5,6 +5,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as ARMAAN
+import copy
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 import random
@@ -36,16 +37,19 @@ def automate_trades(i, driver, times):
         # Choosing Trade in TradeGroup
         trade_count = find_trade_count(i, driver, chosenGroup)
         print("Trades Found : ", trade_count)
-        tradeNamePath[0] = tradeNamePath[0] + str(chosenGroup) + tradeNamePath[2]
-        trade_name , chosenTrade = choose_and_name(i, driver, 1, trade_count, tradeNamePath, 0)
+        tradeNamePathcopy = copy.deepcopy(tradeNamePath)
+        tradeNamePathcopy[0] = tradeNamePathcopy[0] + str(chosenGroup) + tradeNamePathcopy[2]
+        trade_name, chosenTrade = choose_and_name(i, driver, 1, trade_count, tradeNamePathcopy, 0)
         print(trade_name)
-        buyOrderWindowPath[0] = buyOrderWindowPath[0] + str(chosenGroup) + buyOrderWindowPath[2] + str(chosenTrade)
-        choose_and_name(i, driver, 2, 1, buyOrderWindowPath)
+        buyOrderWindowPathcopy = copy.deepcopy(buyOrderWindowPath)
+        buyOrderWindowPathcopy[0] = buyOrderWindowPathcopy[0] + str(chosenGroup) + buyOrderWindowPathcopy[2] + str(chosenTrade)
+        choose_and_name(i, driver, 2, 1, buyOrderWindowPathcopy)
         delta_val = readTradeWindow(i, driver)
         if delta_val == "unable to open trade window":
             for i in range(times):
                 edit_order(i, driver, times, chosenGroup, chosenTrade, delta_val)
-            return
+            closegroup(i, driver, chosenGroup)
+            continue
         for i in range(times):
             msg, badla = randomize_inputs(i, driver, delta_val)
             if "successfully for" in msg:
@@ -53,7 +57,7 @@ def automate_trades(i, driver, times):
                     edit_order(i, driver, times, chosenGroup, chosenTrade, badla)
                 break
             if badla < 1 and i > 1 :
-                delta_val =  float(delta_val) + 5.0
+                delta_val = float(delta_val) + 5.0
             time.sleep(10)
         closegroup(i, driver, chosenGroup)
 
@@ -153,6 +157,7 @@ def randomize_inputs(i, driver, delta_val):
 
 
 def edit_order(i, driver, times, group, trade, badla):
+
     edit_buy_price = edit_price[0] + str(group) + edit_price[1] + str(trade) + edit_price[2]
     edit_qty_val = edit_qty[0] + str(group) + edit_qty[1] + str(trade) + edit_qty[2]
     btn = edit_btn[0] + str(group) + edit_btn[1] + str(trade) + edit_btn[2]
@@ -183,6 +188,7 @@ def edit_order(i, driver, times, group, trade, badla):
 
 
 def closegroup(i , driver, chosen):
+    print("In closeGroup")
     ele = WebDriverWait(driver, 20).until(
         ARMAAN.presence_of_element_located((By.XPATH, tradegroupPath[0] + str(chosen) + tradegroupPath[1])))
     ele.click()
