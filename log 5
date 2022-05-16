@@ -1,0 +1,643 @@
+/home/armaan/PycharmProjects/pythonProject1/venv/bin/python /home/armaan/PycharmProjects/pythonProject1/main.py
+Number of CPUs in the system: 8
+Logged in successfully at tab  0
+Opened Testing Environment 
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  28 Jul 2022
+ ->  :  39800
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  28 Jul 2022
+ ->  :  30 Jun 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  26 May 2022
+Running Strategy :  F2FSP
+ ->  :  26 May 2022
+Running Strategy :  F2FB1
+ ->  :  31 May 2022
+Running Strategy :  F2FSP
+ ->  :  26 May 2022
+Running Strategy :  ORS
+ ->  :  LM
+ ->  :  CE
+ ->  :  21 Jun 2022
+ ->  :  19800
+ ->  :  15100
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  29 Dec 2022
+ ->  :  43500
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  28 Jul 2022
+ ->  :  30 Jun 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STG
+ ->  :  LM
+ ->  :  16 Jun 2022
+ ->  :  31100
+ ->  :  30500
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  28 Jul 2022
+ ->  :  30 Jun 2022
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  F2FI
+ ->  :  28 Jul 2022
+ ->  :  30 Jun 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  ODS
+ ->  :  ML
+ ->  :  CE
+ ->  :  16 Jun 2022
+ ->  :  36600
+ ->  :  30 Jun 2022
+ ->  :  42100
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  26 Jul 2022
+ ->  :  28 Jun 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STG
+ ->  :  ML
+ ->  :  19 May 2022
+ ->  :  41300
+ ->  :  36300
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  31 May 2022
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  28 Jun 2022
+ ->  :  18800
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  21 Jun 2022
+ ->  :  19600
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  31 May 2022
+Running Strategy :  ORS
+ ->  :  LM
+ ->  :  PE
+ ->  :  21 Jun 2022
+ ->  :  13400
+ ->  :  17000
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  ODS
+ ->  :  LM
+ ->  :  PE
+ ->  :  19 May 2022
+ ->  :  29900
+ ->  :  28 Jul 2022
+ ->  :  35400
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  12 Jul 2022
+ ->  :  17300
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  28 Jun 2022
+ ->  :  16000
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+
+Number of CPUs in the system: 8
+Logged in successfully at tab  0
+Opened Testing Environment
+Running Strategy :  ORS
+ ->  :  ML
+ ->  :  PE
+ ->  :  17 May 2022
+ ->  :  5700
+ ->  :  7800
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STG
+ ->  :  ML
+ ->  :  30 Mar 2023
+ ->  :  45000
+ ->  :  33000
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  28 Jun 2022
+ ->  :  14900
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  28 Jul 2022
+ ->  :  30 Jun 2022
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  ORS
+ ->  :  ML
+ ->  :  CE
+ ->  :  02 Jun 2022
+ ->  :  40100
+ ->  :  40700
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STG
+ ->  :  LM
+ ->  :  30 Mar 2023
+ ->  :  37500
+ ->  :  31500
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  26 Jul 2022
+ ->  :  31 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  19 May 2022
+ ->  :  38200
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  26 Jul 2022
+ ->  :  28 Jun 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  26 Jul 2022
+ ->  :  31 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FI
+ ->  :  26 May 2022
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  28 Jul 2022
+ ->  :  40300
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  28 Jun 2022
+ ->  :  31 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  02 Jun 2022
+ ->  :  36800
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  28 Jun 2022
+ ->  :  31 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FI
+ ->  :  30 Jun 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STG
+ ->  :  LM
+ ->  :  30 Jun 2022
+ ->  :  36600
+ ->  :  30600
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  28 Jul 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  28 Jun 2022
+ ->  :  31 May 2022
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  31 May 2022
+ ->  :  20500
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  30 Jun 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  ODS
+ ->  :  ML
+ ->  :  PE
+ ->  :  24 May 2022
+ ->  :  18600
+ ->  :  21 Jun 2022
+ ->  :  16900
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  F2FI
+ ->  :  28 Jul 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  ODS
+ ->  :  ML
+ ->  :  PE
+ ->  :  21 Jun 2022
+ ->  :  19600
+ ->  :  31 May 2022
+ ->  :  21100
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  26 Jul 2022
+ ->  :  15200
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FB1
+ ->  :  28 Jul 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  ODS
+ ->  :  LM
+ ->  :  CE
+ ->  :  21 Jun 2022
+ ->  :  18600
+ ->  :  07 Jun 2022
+ ->  :  15600
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  F2FSP
+ ->  :  26 Jul 2022
+ ->  :  31 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  26 Jun 2025
+ ->  :  13000
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  ORS
+ ->  :  ML
+ ->  :  PE
+ ->  :  25 Jun 2026
+ ->  :  19000
+ ->  :  17000
+ ->  :  CP6
+Error in add strategy.
+Running Strategy :  F2FB1
+ ->  :  26 May 2022
+Running Strategy :  F2FB1
+ ->  :  28 Jul 2022
+ ->  :  30 Jun 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  26 May 2022
+Running Strategy :  F2FSP
+ ->  :  30 Jun 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  30 Jun 2022
+ ->  :  26 May 2022
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  LM
+ ->  :  29 Dec 2022
+ ->  :  42000
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  STD
+ ->  :  ML
+ ->  :  31 May 2022
+ ->  :  18700
+ ->  :  CP6
+New strategy added successfully
+Running Strategy :  F2FSP
+ ->  :  26 May 2022
+
+Process finished with exit code 0
+
+
+CP6_F2FSP_BANKNIFTY
+Trades Found :  1
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/span
+nil
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div/i
+Opened Window :  Buy Order Window - F2FSP_BANKNIFTY_220630_220526
+delta :  94.95
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  138.69847779526543
+lots val :  626
+lots pc val :  670
+Orb1 request sent successfully for strategy F2FSP BANKNIFTY F_N with parameters- Price: 138.69847779526543, Qty: 626
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  2323
+EDIT : lots val :  -132
+Orb1 request sent successfully for strategy F2FSP BANKNIFTY F_N with parameters- Price: 138.69847779526543, Qty: 626
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1510
+EDIT : lots val :  -291
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  350
+EDIT : lots val :  21
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1436
+EDIT : lots val :  554
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  2171
+EDIT : lots val :  -256
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  2224
+EDIT : lots val :  1658
+Orb1 request modified successfully for strategy F2FSP BANKNIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -1825
+EDIT : lots val :  -877
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -1115
+EDIT : lots val :  28
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  2624
+EDIT : lots val :  -126
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  -1615
+EDIT : lots val :  -59
+Orb1 request could not be modified for strategy F2FSP BANKNIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+Opened Window :  Buy Order Window - F2FSP_NIFTY_220630_220526
+delta :  5.85
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  8.022312480473074
+lots val :  1722
+lots pc val :  2325
+Orb1 request sent successfully for strategy F2FSP NIFTY F_N with parameters- Price: 8.022312480473074, Qty: 1722
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  5358
+EDIT : lots val :  493
+Orb1 request sent successfully for strategy F2FSP NIFTY F_N with parameters- Price: 8.022312480473074, Qty: 1722
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  3865
+EDIT : lots val :  985
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  9479
+EDIT : lots val :  1239
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  7315
+EDIT : lots val :  648
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  718
+EDIT : lots val :  260
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  9421
+EDIT : lots val :  206
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  1068
+EDIT : lots val :  1279
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  9769
+EDIT : lots val :  82
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  8245
+EDIT : lots val :  677
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  4183
+EDIT : lots val :  604
+Orb1 request could not be modified for strategy F2FSP NIFTY F_N.
+
+
+----------------------------------------------------------------------------------------------
+
+Opened Window :  Buy Order Window - STD_NIFTY_250626
+delta :  0
+Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  0.0
+lots val :  1592
+lots pc val :  2252
+Orb1 request sent successfully for strategy STD NIFTY _ with parameters- Price: 0, Qty: 1592
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  735
+EDIT : lots val :  457
+Orb1 request sent successfully for strategy STD NIFTY _ with parameters- Price: 0, Qty: 1592
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  125
+EDIT : lots val :  1497
+Orb1 request modified successfully for strategy STD NIFTY _
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  208
+EDIT : lots val :  1064
+Orb1 request modified successfully for strategy STD NIFTY _
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  168
+EDIT : lots val :  1748
+Orb1 request modified successfully for strategy STD NIFTY _
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  858
+EDIT : lots val :  114
+Orb1 request modified successfully for strategy STD NIFTY _
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  755
+EDIT : lots val :  1455
+Orb1 request modified successfully for strategy STD NIFTY _
+
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+CP5_F2F_NIFTY
+Trades Found :  1
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/span
+nil
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div/i
+unable to open trade window
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  773
+EDIT : lots val :  395
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  184
+EDIT : lots val :  321
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  842
+EDIT : lots val :  1741
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  99
+EDIT : lots val :  1643
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  939
+EDIT : lots val :  1041
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  653
+EDIT : lots val :  192
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  951
+EDIT : lots val :  1948
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  310
+EDIT : lots val :  684
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  470
+EDIT : lots val :  1407
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  705
+EDIT : lots val :  30
+Orb1 request modified successfully for strategy F2FI NIFTY F_N
+
+
+----------------------------------------------------------------------------------------------
