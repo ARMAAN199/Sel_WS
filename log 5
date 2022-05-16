@@ -641,3 +641,53 @@ Orb1 request modified successfully for strategy F2FI NIFTY F_N
 
 
 ----------------------------------------------------------------------------------------------
+
+Number of CPUs in the system: 8
+Logged in successfully at tab  0
+Opened Testing Environment
+Going to Strategies Page
+TradeGroups Found :  2
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[1]/span
+CP5_STD_NIFTY
+Trades Found :  1
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/span
+nil
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div/i
+unable to open trade window
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  38
+EDIT : lots val :  1568
+Orb1 request modified successfully for strategy STD NIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  679
+EDIT : lots val :  1832
+Orb1 request modified successfully for strategy STD NIFTY N_N
+
+
+----------------------------------------------------------------------------------------------
+
+In closeGroup
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[1]/span
+CP5_STD_NIFTY
+Trades Found :  1
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/span
+nil
+/html/body/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/div/i
+unable to open trade window
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  692
+EDIT : lots val :  293
+Orb1 request could not be modified for strategy STD NIFTY N_N.
+
+
+----------------------------------------------------------------------------------------------
+
+ EDIT : Taking Badla with a variability of plus-minus 20% of delta, calculated badla val :  58
+EDIT : lots val :  808
+Orb1 request could not be modified for strategy STD NIFTY N_N.
+
+
+----------------------------------------------------------------------------------------------
+
+In closeGroup
