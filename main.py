@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from codes import *
 from selenium.webdriver.support.ui import Select
 import random
 from trades import *
@@ -31,7 +32,7 @@ def login(i, driver):
         # print("Found Login Button")
         userid.clear()
         userid.click()
-        userid.send_keys('test')
+        userid.send_keys(username)
         # print("Entered a UserId")
         password.clear()
         password.click()
@@ -331,12 +332,12 @@ def css241_selections(i, driver,leg, strat, strat_name):
 
 def openchrome_and_openchat(input):
         #global input_box
-        times = 2
+        times = 8
         driver = webdriver.Chrome()
         for i in range(1):
             driver.execute_script("window.open('about:blank','tab"+str(i)+"');")
             driver.switch_to.window("tab"+str(i)+"")
-            driver.get("http://172.168.101.33")
+            driver.get(test_path)
             # driver.execute_script("document.body.style.zoom='90%'")
             # driver.switch_to.window("tab" + str(i) + "")
             # time.sleep(1)
@@ -345,9 +346,9 @@ def openchrome_and_openchat(input):
 
         # for i in range(times):
         #     check_data(i, driver)
-        # for i in range(times):
-        #     select_leg(i, driver)
-        #     time.sleep(8)
+        for i in range(times):
+            select_leg(i, driver)
+            time.sleep(8)
 
         # for i in range(times):
         #     automate_trades(i, driver, times)
