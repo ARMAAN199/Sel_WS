@@ -5,7 +5,7 @@ import time
 from selenium.common.exceptions import NoSuchElementException, InvalidSelectorException
 from selenium.common.exceptions import TimeoutException
 
-POLL_FREQUENCY = 0.5
+POLL_FREQUENCY = 0.5 # time in between 2 function calls
 IGNORED_EXCEPTIONS = (NoSuchElementException,)
 
 
