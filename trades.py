@@ -18,11 +18,13 @@ import os
 def automate_trades(i, driver, times):
     # time.sleep(10)
     try:
-        element =  WebDriverWait(driver, 40).until(
+        element =  WebDriverWait(driver, 10).until(
             ARMAAN.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/span')))
         element.click()
+        time.sleep(2)
         print("Going to Strategies Page")
     except:
+        print("Going to Strategies Page 2")
         automate_trades(i,driver, times)
         return
 
